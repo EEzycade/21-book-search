@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Jumbotron, Container, CardColumns, Card, Button } from 'react-bootstrap';
 
 import { useQuery, useMutation } from '@apollo/react-hooks';
@@ -12,7 +12,7 @@ const SavedBooks = () => {
 
     const [removeBook] = useMutation(REMOVE_BOOK);
 
-    const { data, loading } = useQuery(QUERY_GET_ME);
+    const { data } = useQuery(QUERY_GET_ME);
     
     const userData = data?.me
 
